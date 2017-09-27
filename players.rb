@@ -2,6 +2,7 @@ class Player
 
   def initialize(name)
     @name = name
+    @dice = @dice1
     @position = 0
   end
 
@@ -15,6 +16,11 @@ class Player
 
   def move(roll)
     @position += roll
+    return @position
   end
+
+  # def roll
+  #   return @dice.roll
+  # end
 
 end
