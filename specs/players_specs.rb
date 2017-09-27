@@ -44,7 +44,11 @@ class TestPlayers < MiniTest::Test
   #   assert_includes(expected, actual)
   # end
 
-  
+  def test_move_over_30
+    @player1.move(25)
+    @player1.move(6)
+    assert_equal(25, @player1.position)
+  end
 
 
 

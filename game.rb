@@ -13,6 +13,7 @@ class Game
   def on_ladder(player)
     for ladder in @board.ladders
       if player.position == ladder.first
+        puts "#{player.name} hit a ladder :)"
         player.move(ladder.last)
       end
     end
@@ -21,6 +22,7 @@ class Game
   def on_snake(player)
     for snake in @board.snakes
       if player.position == snake.first
+        puts "#{player.name} hit a snake :("
         player.move(snake.last)
       end
     end
@@ -28,7 +30,7 @@ class Game
 
   def take_turn(player)
     turnroll = @dice.roll
-    puts "#{player.name} rolled a #{turnroll}!"
+    puts "#{player.name} rolled a #{turnroll}."
     player.move(turnroll)
     on_ladder(player)
     on_snake(player)

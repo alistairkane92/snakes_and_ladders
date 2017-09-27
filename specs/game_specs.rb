@@ -49,20 +49,20 @@ class TestGame < MiniTest::Test
   end
 
   #check if on ladder
-  def test_position_on_ladder
-    @player1.move(5)
-    @game1.on_ladder(@player1)
-
-    assert_equal(8, @player1.position)
-  end
+  # def test_position_on_ladder
+  #   @player1.move(5)
+  #   @game1.on_ladder(@player1)
+  #
+  #   assert_equal(8, @player1.position)
+  # end
 
   #check if on snake
-  def test_position_on_snake
-    @player1.move(17)
-    @game1.on_snake(@player1)
-
-    assert_equal(4, @player1.position)
-  end
+  # def test_position_on_snake
+  #   @player1.move(17)
+  #   @game1.on_snake(@player1)
+  #
+  #   assert_equal(4, @player1.position)
+  # end
 
   #rolled a six
   # def test_player_turn

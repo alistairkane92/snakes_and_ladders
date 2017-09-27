@@ -15,7 +15,12 @@ class Player
   end
 
   def move(roll)
-    @position += roll
+    new_position = @position + roll
+    if new_position > 30
+        @position = @position
+    else
+        @position += roll
+    end
     return @position
   end
 
